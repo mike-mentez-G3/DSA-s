@@ -1,0 +1,19 @@
+  // Display all songs in the playlist
+    void displaySongs() const {
+        if (songs.empty()) {
+            std::cout << "No songs in the playlist.\n";
+            return;
+        }
+
+        std::cout << "\nPlaylist:\n";
+        for (const auto& song : songs) {
+            song.display();
+            std::cout << "-------------------------\n";
+        }
+    }
+
+    // Get the number of songs in the playlist
+    int getSongCount() const {
+        return songs.size();
+    }
+};
